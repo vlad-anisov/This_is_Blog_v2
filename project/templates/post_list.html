@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    {% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="blog.css" type="text/css">
+
+    <meta charset="UTF-8">
+    <title>BLOG</title>
+</head>
+<body>
+<h1>
+    {% for post in posts %}
+        <div>
+            <p id = "test"> published:{{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+    </h1>
+</body>
+</html>
